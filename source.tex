@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage[russian,english]{babel}
+\usepackage{cmbright}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[sf]{libertine}
+\usepackage{microtype}
+\usepackage{paracol}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\usepackage{fontspec}
+\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+
+% Geometry
+\geometry{hmargin=1.75cm, vmargin=2.5cm}
+\columnratio{0.65, 0.35}
+\setlength\columnsep{0.05\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
+
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\bigskipamount}{\smallskipamount}
+\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
+\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+
+\begin{document}
+
+\vspace*{\fill}
+
+\begin{paracol}{2}
+
+% Name & headline
+\heading{Руслан Смирнов}{Junior+ Machine Learning Engineer, \\ Python}
+
+\switchcolumn
+
+% Identity card
+\vspace{0.01\textheight}
+\begin{supertabular}{ll}
+  \footnotesize\faPhone & +7 930 671 09 95 \\
+  \footnotesize\faEnvelope & \href{mailto:smirnov_ruslan@outlook.com}{smirnov\_ruslan@outlook.com} \\
+  \footnotesize\faTelegram & \href{https://t.me/acid9reen}{@acid9reen} \\
+  \footnotesize\faGithub & \href{https://github.com/acid9reen}{acid9reen} \\
+\end{supertabular}
+
+\bigskip
+\switchcolumn*
+
+\section{Высшее образование}
+
+\entry{ННГУ им. Лобачевского}{Магистр}{Нижний новгород}{2022 -- 2024}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Направление: Прикладная Математика и Информатика.
+  \item Кафедра: Алгебры, Геометрии и Дискретной Математики.
+\end{itemize}
+
+\medskip
+
+\entry{ННГУ им. Лобачевского}{Бакалавр}{Нижний новгород}{2018 -- 2022}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+    \item Направление: Компьютерные Науки и Приложения.
+    \item Кафедра: Алгебры, Геометрии и Дискретной Математики.
+\end{itemize}
+
+\switchcolumn
+
+\section{Навыки}
+\begin{supertabular}{rl}
+  \tableentry{\footnotesize\faCode}{Python \textperiodcentered{} PyTorch \textperiodcentered{} OpenCV}{}
+  \tableentry{}{FastAPI \textperiodcentered{} Git \textperiodcentered{} Linux \textperiodcentered{} ООП}{}
+  \tableentry{}{ФП}{}
+  \tableentry{}{}{}
+
+  \tableentry{\footnotesize\faLanguage}{English --- Intermediate}{}
+\end{supertabular}
+
+\switchcolumn*
+
+\section{Опыт работы}
+
+\entry{ННГУ им. Лобачевского}{Лаборант-исследователь}{Нижний Новгород}{Октябрь 2022 -- Н.В.}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Обязанности: разработка ПО для автоматической разметки электрограммы с использованием сверточных нейронных сетей
+  \item Стек: Python, PyTorch, ONNX, MLFlow
+\end{itemize}
+
+\medskip
+
+\entry{АО Гринатом}{Python разработчик}{Нижний Новгород}{Апрель 2022 -- Н.В.}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Обязанности: поиск, сравнение, реализация, обучение моделей машинного обучения для задач биометрии.
+    Модели детекции лица (mtcnn, yoloface, retinaface),
+    оценки качества (sdd-fiqa, faceqnet). Оборачивание моделей в микросервисы.
+  \item Стек: Python, PyTorch, ONNX, WandB, OpenCV, FastAPI, Redis, Celery, Docker
+\end{itemize}
+
+\switchcolumn
+
+
+\section{Курсы}
+\begin{supertabular}{rl}
+  \tableentry{2021}{\textbf{Sber corporate university}}{}
+  \tableentry{}{Python, Machine Learning}{spaceafter}
+  \tableentry{2020}{\textbf{Artezio academy 3}}{}
+  \tableentry{}{Python}{spaceafter}
+  \tableentry{2019}{\textbf{Intel Delta 11 Course}}{}
+  \tableentry{}{Python, C++}{spaceafter}
+\end{supertabular}
+
+\end{paracol}
+
+\vspace*{\fill}
+
+\end{document}
