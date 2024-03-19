@@ -32,6 +32,8 @@
 \newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
 
 \begin{document}
+% Это для того, чтобы текст не вылазил за край параграфа
+\emergencystretch 3em
 
 \vspace*{\fill}
 
@@ -51,7 +53,7 @@
   \footnotesize\faGithub & \href{https://github.com/acid9reen}{acid9reen} \\
 \end{supertabular}
 
-\bigskip
+\smallskip
 \switchcolumn*
 
 \section{Высшее образование}
